@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-box {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.user-message, .bot-message {
+    margin: 30px 0;
+}
+
+.user-message {
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 1px;
+}
+
+.bot-message {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.chat-form {
+    width: 100%;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px 15px;
+    border-radius: 10px; /* Circular rectangle corners */
+    border: 1px solid #ccc;
+    font-size: 1em;
+    resize: vertical;
+    background-color: white; /* White background */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Add this CSS to your existing styles.css file */
+
+.message.user {
+    background-color: #FFFFFF; /* White background color */
+    color: #000000; /* Black text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Add some padding around the text */
+    margin: 10px 0; /* Add margin to separate messages */
+    max-width: 70%; /* Limit the maximum width of the container */
+    float: right; /* Align the user messages to the right */
+}
+
+.message.bot {
+    background-color: #F0F0F0; /* Light gray background color for bot messages */
+    color: #000000; /* Black text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Add some padding around the text */
+    margin: 10px 0; /* Add margin to separate messages */
+    max-width: 70%; /* Limit the maximum width of the container */
+    clear: both; /* Clear the float */
+}
+
+.chat-box {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px; /* Limit the maximum height of the chat box */
+}

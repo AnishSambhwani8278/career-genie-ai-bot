@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerGenie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CareerGenie</h1>
+        <p>Start by writing "Hi!"</p>
+        <div class="chat-container">
+            <div class="chat-box">
+                {% for message in chat_history %}
+                    <div class="user-message">
+                        <p><strong>You:</strong></p>
+                        <p>{{ message.user }}</p>
+                    </div>
+                    <div class="bot-message">
+                        <p><strong>Genie:</strong></p>
+                        {% for paragraph in message.bot.split('\n') %}
+                            <p>{{ paragraph }}</p>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <form action="/chat" method="post" class="chat-form">
+                <textarea id="user_input" name="user_input" rows="4" placeholder="Ask Genie..."></textarea><br><br>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
